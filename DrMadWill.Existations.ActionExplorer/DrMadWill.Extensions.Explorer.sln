@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrMadWill.Extensions.Explorer", "DrMadWill.Existations.Explorer\DrMadWill.Extensions.Explorer.csproj", "{33DF708A-B5A4-425C-9F92-71E3439EF1DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33DF708A-B5A4-425C-9F92-71E3439EF1DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33DF708A-B5A4-425C-9F92-71E3439EF1DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33DF708A-B5A4-425C-9F92-71E3439EF1DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33DF708A-B5A4-425C-9F92-71E3439EF1DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EFCFB597-28E8-4BA0-9BB0-EE4BA2DE3648}
+	EndGlobalSection
+EndGlobal
