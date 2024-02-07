@@ -3,10 +3,20 @@ namespace DrMadWill.Extensions.Explorer.Models;
 public class ActionList
 {
     public string Controller { get; set; }
-    public IList<ActionProp> SystemsActions { get; set; } = new List<ActionProp>();
-    public IList<ActionProp> ExternalActions { get; set; } = new List<ActionProp>();
-    public IList<ActionProp> UserActions { get; set; } = new List<ActionProp>();
+    public IList<ActionProp> Actions { get; set; }
+    public IList<ControllerAccessProp> Accesses { get; set; }
 
-    public IList<ActionProp> AllAction => SystemsActions.Concat(ExternalActions).Concat(UserActions).ToList();
+    public ActionList(string controller, IList<ActionProp> actions,IList<ControllerAccessProp> accesses)
+    {
+        Controller = controller;
+        Actions = actions;
+        Accesses = accesses;
+    }
+
+    public ActionList()
+    {
+        Actions = new List<ActionProp>();
+        Accesses = new List<ControllerAccessProp>();
+    }
 }
 
