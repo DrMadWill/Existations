@@ -1,5 +1,6 @@
 using System.Security.Cryptography;
 using System.Text;
+using DrMadWill.Extensions.Explorer.Attributes;
 
 namespace DrMadWill.Extensions.Explorer;
 
@@ -17,11 +18,14 @@ public static class ExplorerHelper
         return providedHash == GenerateHash(key, code);
     }
 
+    public static string GetCode(string name, string operation, string specialCode)
+        => $"{name}.{operation}.{specialCode}";
+
     public static string? GetOperation(this Type type)
     {
         var attr = type.GetCustomAttributes(true)
-            .FirstOrDefault(a => a.GetType() == typeof(SysDefinitionAttribute)) 
-                as SysDefinitionAttribute;
+            .FirstOrDefault(a => a.GetType() == typeof(ActionDefinitionAttribute)) 
+                as ActionDefinitionAttribute;
 
         return attr?.Operation.ToString();
     } 

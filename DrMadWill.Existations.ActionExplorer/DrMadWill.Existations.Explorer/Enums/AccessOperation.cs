@@ -1,6 +1,6 @@
 namespace DrMadWill.Extensions.Explorer.Enums;
 
-public enum Crud
+public enum AccessOperation
 {
     Create = 1,
     Read = 2,
