@@ -9,7 +9,6 @@ namespace DrMadWill.Extensions.Response;
 public class GenericResponse<Type>
 {
     public static string Success = "Success";
-    [JsonConstructor]
     public GenericResponse(bool status, int genericStatus, string? message)
     {
         GenericStatus = genericStatus;

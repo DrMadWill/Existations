@@ -61,5 +61,8 @@ public class GenericServiceResult<T>
         new(result, false, message, errors);
     
     public static GenericServiceResult<T> Succeed(T result, string? message = null) => new(result, true, message);
-    
+
+    public static ServiceResult MapToServiceResult(GenericResponse<T> result) =>
+        new(result.Status, result.Message, result.Error);
+
 }
