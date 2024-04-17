@@ -26,7 +26,9 @@ public class ServiceResult
     public static ServiceResult Failed(string? message = null, string[]? errors = null) => new(false, message, errors);
     
     public static ServiceResult Succeed(string? message = null) => new(true, message);
-    
+
+    public GenericServiceResult<T> GenerateGenericServiceResult<T>(T result)
+        => new(result, Success, Message, Errors);
 }
 
 public class GenericServiceResult<T>
@@ -61,8 +63,12 @@ public class GenericServiceResult<T>
         new(result, false, message, errors);
     
     public static GenericServiceResult<T> Succeed(T result, string? message = null) => new(result, true, message);
-
-    public static ServiceResult MapToServiceResult(GenericResponse<T> result) =>
-        new(result.Status, result.Message, result.Error);
+    
+    
+    public ServiceResult GetServiceResult() =>
+        new(Success, Message, Errors);
+    
+    public static ServiceResult GetServiceResult(GenericServiceResult<T> result)
+        => new(result.Success,result.Message,result.Errors);
 
 }

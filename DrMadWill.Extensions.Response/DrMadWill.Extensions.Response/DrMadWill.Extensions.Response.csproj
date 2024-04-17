@@ -14,7 +14,7 @@
     <Copyright>All</Copyright>
     <RootNamespace>DrMadWill.Extensions</RootNamespace>
     <RepositoryType>git</RepositoryType>
-    <Version>1.5</Version>
+    <Version>1.6</Version>
     <Authors>DrMadWil</Authors>
   </PropertyGroup>
 
